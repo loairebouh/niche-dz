@@ -55,7 +55,7 @@ const data = [
   },
   {
     category: "Prix",
-    title: "Meilleur Prix au Marché Algérien",
+    title: "Meilleur Prix au Marchet Algérien",
     src: pricingPic,
     content: <DummyContent />,
   },
