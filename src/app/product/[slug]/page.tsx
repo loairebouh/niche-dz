@@ -12,7 +12,7 @@ interface Props {
 
 export async function generateStaticParams() {
   const query = `*[_type == "product"]{slug}`;
-  const products = await sanityClient.fetch(query);
+  const products = await sanityClient.fetch(query, {}, { cache: "no-store"});
 
   return products.map((product: { slug: { current: string } }) => ({
     slug: product.slug.current,

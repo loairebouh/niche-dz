@@ -7,7 +7,7 @@ import { GrFormView } from "react-icons/gr";
 import Link from "next/link";
 
 export default async function AllProducts() {
-  const products = (await client.fetch(`*[_type == "product"]`)) as Product[];
+  const products = (await client.fetch(`*[_type == "product"]`, {}, {cache: "no-store"})) as Product[];
 
   if (!products || products.length === 0) {
     return <p>No products available.</p>;
